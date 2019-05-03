@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ZBLL H</title>
+	<style type="text/css">
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #FFF;
+}
+#main {
+	max-width: 560px;
+	margin: 20px auto;
+}
+table {
+	border-collapse: collapse;
+}
+thead {
+	background-color: #BBB;
+}
+th, td {
+	border: solid 1px;
+	padding: 0;
+}
+tr > td:first-child {
+	padding: 0 0 0 4px;
+}
+tr > td:last-child {
+	padding: 0 5px;
+}
+h1, h2 {
+	margin: 0;
+}
+.none {
+	display: none;
+}
+.inv {
+	color: red;
+}
+	</style>
+	<script>
+const toggleInv = () => {
+	for (span of document.getElementsByTagName('span')) {
+		span.classList.toggle('none');
+	}
+}
+	</script>
+</head>
+<body>
+	<header>
+		<a href="#tate-one">縦１</a>
+		<a href="#tate-two">縦２</a>
+		<a href="#yoko-one">横１</a>
+		<a href="#yoko-two">横２</a>
+		<label>
+			<input type="checkbox" onclick="toggleInv()">
+			show inverse-alg
+		</label>
+	</header>
+	<div id="main">
+		<h1>ZBLL H Cases</h1>
+		<h2 id="tate-one">縦１</h2>
+		<table class="">
+			<thead>
+				<tr>
+					<th>Case</th>
+					<th>Image</th>
+					<th>Alg</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh13">H13</a>
+					</td>
+					<td>
+						<img src="zbll/H13.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U' L' U L U' L' U' L U2 R U' L' U R' y'<br>
+						</span>
+						y R U' L U R' U2 L' U L U L' U' L U L'<br>
+						y R U' L U R' U2 (L' U L) U (L' U' L) U L'<br>
+						y R U' L U R' U2 L(T') U L(T) U L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh15">H15</a>
+					</td>
+					<td>
+						<img src="zbll/H15.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U R U' R' U R U R' U2 L' U R U' L y'<br>
+						</span>
+						y L' U R' U' L U2 R U' R' U' R U R' U' R<br>
+						y L' U R' U' L U2 (R U' R') U' (R U R') U' R<br>
+						y L' U R' U' L U2 R(T') U' R(T) U' R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh20">H20</a>
+					</td>
+					<td>
+						<img src="zbll/H20.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F U R U2 R' U R U R' F' R U2 R' U' R U' R' y'<br>
+						</span>
+						y R U R' U R U2 R' F R U' R' U' R U2 R' U' F'<br>
+						y (R U R') U (R U2 R') F (R U' R') U' (R U2 R') U' F'<br>
+						y R(T) U R(T2) F R(T') U' R(T2) U' F'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh14">H14</a>
+					</td>
+					<td>
+						<img src="zbll/H14.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U2 R2 U R2 U R' D R' U2 R D' R2 y2<br>
+						</span>
+						y2 R2 D R' U2 R D' R U' R2 U' R2 U2 R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh16">H16</a>
+					</td>
+					<td>
+						<img src="zbll/H16.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U2 L2 U' L2 U' L D' L U2 L' D L2<br>
+						</span>
+						L2 D' L U2 L' D L' U L2 U L2 U2 L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh21">H21</a>
+					</td>
+					<td>
+						<img src="zbll/H21.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U' L' U R' U L U L' U L y2<br>
+						</span>
+						y2 L' U' L U' L' U' R U' L U R'<br>
+						y2 (L' U' L) U' L' U' R U' L U R'<br>
+						y2 L(T) U' L' U' R U' L U R'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh22">H22</a>
+					</td>
+					<td>
+						<img src="zbll/H22.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U R U' L U' R' U' R U' R'<br>
+						</span>
+						R U R' U R U L' U R' U' L<br>
+						(R U R') U R U L' U R' U' L<br>
+						R(T) U R U L' U R' U' L
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh17">H17</a>
+					</td>
+					<td>
+						<img src="zbll/H17.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U' L' U R' U L2 U L2 U L U' L U' L'<br>
+						</span>
+						L U L' U L' U' L2 U' L2 U' R U' L U R'<br>
+						L (U L' U L') (U' L2 U' L2) U' R U' L U R'<br>
+						L (U L')2 (U' L2)2 U' R U' L U R'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh18">H18</a>
+					</td>
+					<td>
+						<img src="zbll/H18.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U R U' L U' R2 U' R2 U' R' U R' U R y2<br>
+						</span>
+						y2 R' U' R U' R U R2 U R2 U L' U R' U' L<br>
+						y2 R' (U' R U' R) (U R2 U R2) U L' U R' U' L<br>
+						y2 R' (U' R)2 (U R2)2 U L' U R' U' L
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh23">H23</a>
+					</td>
+					<td>
+						<img src="zbll/H23.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U R U2 L' R' U R2 U' L U R' y'<br>
+						</span>
+						y R U' L' U R2 U' R L U2 R' U' R<br>
+						y R U' L' U R2 U' (R L) U2 R' U' R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh24">H24</a>
+					</td>
+					<td>
+						<img src="zbll/H24.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U' L' U2 R L U' L2 U R' U' L y'<br>
+						</span>
+						y L' U R U' L2 U L' R' U2 L U L'<br>
+						y L' U R U' L2 U (L' R') U2 L U L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh19">H19</a>
+					</td>
+					<td>
+						<img src="zbll/H19.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R2 U R' U' R' U2 R' U2 R U R' D R' U R D'<br>
+						</span>
+						D R' U' R D' R U' R' U2 R U2 R U R U' R2<br>
+						D R' U' R D' (R U' R') (U2 R U2 R) U (R U' R') R'<br>
+						D R' U' R D' R(T') (U2 R)2 U R(T') R'
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 id="tate-two">縦２</h2>
+		<table class="">
+			<thead>
+				<tr>
+					<th>Case</th>
+					<th>Image</th>
+					<th>Alg</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh25">H25</a>
+					</td>
+					<td>
+						<img src="zbll/H25.png">
+					</td>
+					<td>
+						<span class="inv none">
+							B' U R2 U' R' U2 R U' R2 U2 R U R' B<br>
+						</span>
+						B' R U' R' U2 R2 U R' U2 R U R2 U' B<br>
+						B' (R U' R') U2 R (R U R') U2 R U R2 U' B<br>
+						B' R(T') U2 R R(T) U2 R U R2 U' B
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh32">H32</a>
+					</td>
+					<td>
+						<img src="zbll/H32.png">
+					</td>
+					<td>
+						<span class="inv none">
+							B U' L2 U L U2 L' U L2 U2 L' U' L B'<br>
+						</span>
+						B L' U L U2 L2 U' L U2 L' U' L2 U B'<br>
+						B (L' U L) U2 L' (L' U' L) U2 L' U' L2 U B'<br>
+						B L(T') U2 L' L(T) U2 L' U' L2 U B'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh28">H28</a>
+					</td>
+					<td>
+						<img src="zbll/H28.png">
+					</td>
+					<td>
+						<span class="inv none">
+							x' U' R U' R' U R' F2 R U' R U R' U x<br>
+						</span>
+						x' U' R U' R' U R' F2 R U' R U R' U x<br>
+						x' U' (R U' R') U R' F2 R U' (R U R') U x<br>
+						x' U' R(T') U R' F2 R U' R(T) U x
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh29">H29</a>
+					</td>
+					<td>
+						<img src="zbll/H29.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U' R2 U x U2 R' U2 R U2 R F R' F' R2 y<br>
+						</span>
+						y' R2 F R F' R' U2 R' U2 R U2 x' U' R2 U R<br>
+						y' (R2 F R F') (R' U2 R' U2) R U2 x' U' R2 U R<br>
+						y' R' R(S) (R' U2)2 R U2 x' U' R2 U R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh30">H30</a>
+					</td>
+					<td>
+						<img src="zbll/H30.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U L2 U' x U2 L U2 L' U2 L' F' L F L2 y'<br>
+						</span>
+						y L2 F' L' F L U2 L U2 L' U2 x' U L2 U' L'<br>
+						y (L2 F' L') F (L U2 L U2) L' U2 x' U L2 U' L'<br>
+						y L L(S) (L U2)2 L' U2 x' U L2 U' L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh26">H26</a>
+					</td>
+					<td>
+						<img src="zbll/H26.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U' R2 F2 U' R2 U' R2 U F2 U R2 U R' y'<br>
+						</span>
+						y R U' R2 U' F2 U' R2 U R2 U F2 R2 U R'<br>
+						y (R U' R') R' U' F2 U' (R2 U R2 U) F2 R (R U R')<br>
+						y R(T') R' U' F2 U' (R2 U)2 F2 R R(T)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh27">H27</a>
+					</td>
+					<td>
+						<img src="zbll/H27.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F U R U' R' U R U' R' U R U' R' F' y'<br>
+						</span>
+						y F R U R' U' R U R' U' R U R' U' F'<br>
+						y F (R U R' U') (R U R' U') (R U R' U') F'<br>
+						y F (R U R' U')3 F'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh31">H31</a>
+					</td>
+					<td>
+						<img src="zbll/H31.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U L2 F2 U L2 U L2 U' F2 U' L2 U' L y<br>
+						</span>
+						y' L' U L2 U F2 U L2 U' L2 U' F2 L2 U' L<br>
+						y' (L' U L) L U F2 U (L2 U' L2 U') F2 L' (L' U' L)<br>
+						y' L(T') L U F2 U (L2 U')2 F2 L' L(T)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 id="yoko-one">横１</h2>
+		<table class="">
+			<thead>
+				<tr>
+					<th>Case</th>
+					<th>Image</th>
+					<th>Alg</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh1">H1</a>
+					</td>
+					<td>
+						<img src="zbll/H1.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U2 R U' L U2 R' U' R U R' U M x<br>
+						</span>
+						x' M' U' R U' R' U R U2 L' U R' U2 R<br>
+						x' M' U' (R U' R') U R U2 L' U R' U2 R<br>
+						x' M' U' R(T') U R U2 L' U R' U2 R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh2">H2</a>
+					</td>
+					<td>
+						<img src="zbll/H2.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U2 L' U R' U2 L U L' U' L U' M x<br>
+						</span>
+						x' M' U L' U L U' L' U2 R U' L U2 L'<br>
+						x' M' U (L' U L) U' L' U2 R U' L U2 L'<br>
+						x' M' U L(T') U' L' U2 R U' L U2 L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh7">H7</a>
+					</td>
+					<td>
+						<img src="zbll/H7.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U2 R2 U' R U' R' U2 F R U R U' R' F' y<br>
+						</span>
+						y' F R U R' U' R' F' U2 R U R' U R2 U2 R'<br>
+						y' F (R U R') U' R' F' U2 (R U R') U R2 U2 R'<br>
+						y' F R(T) U' R' F' U2 R(T) U R2 U2 R'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh3">H3</a>
+					</td>
+					<td>
+						<img src="zbll/H3.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U' R' D' R U R' D R' U R' U R U2 R'<br>
+						</span>
+						R U2 R' U' R U' R D' R U' R' D R U R<br>
+						(R U2 R') (U' R U' R) D' (R U' R') D R U R<br>
+						R(T2) (U' R)2 D' R(T') D R U R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh4">H4</a>
+					</td>
+					<td>
+						<img src="zbll/H4.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L U L D L' U' L D' L U' L U' L' U2 L<br>
+						</span>
+						L' U2 L U L' U L' D L' U L D' L' U' L'<br>
+						(L' U2 L) (U L' U L') D (L' U L) D' L' U' L'<br>
+						L(T2) (U L')2 D L(T') D' L' U' L'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh5">H5</a>
+					</td>
+					<td>
+						<img src="zbll/H5.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U R U L' D' L U2 L' D L2 U R'<br>
+						</span>
+						R U' L2 D' L U2 L' D L U' R' U' L
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh6">H6</a>
+					</td>
+					<td>
+						<img src="zbll/H6.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U' L' U' R D R' U2 R D' R2 U' L<br>
+						</span>
+						L' U R2 D R' U2 R D' R' U L U R'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh10">H10</a>
+					</td>
+					<td>
+						<img src="zbll/H10.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F' L2 U L2 U' L2 U' L2 B L2 B' F<br>
+						</span>
+						F' B L2 B' L2 U L2 U L2 U' L2 F <br>
+						(F' B) L2 B' (L2 U L2 U) L2 U' L2 F <br>
+						(F' B) L2 B' (L2 U)2 L2 U' L2 F 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh11">H11</a>
+					</td>
+					<td>
+						<img src="zbll/H11.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F R2 U' R2 U R2 U R2 B' R2 B F'<br>
+						</span>
+						F B' R2 B R2 U' R2 U' R2 U R2 F'<br>
+						(F B') R2 B (R2 U' R2 U') R2 U R2 F'<br>
+						(F B') R2 B (R2 U')2 R2 U R2 F'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh8">H8</a>
+					</td>
+					<td>
+						<img src="zbll/H8.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F U R U' R' U R U2 R' U' R U R' F' y2<br>
+						</span>
+						y2 F R U' R' U R U2 R' U' R U R' U' F'<br>
+						y2 F (R U' R') U (R U2 R') U' (R U R') U' F'<br>
+						y2 F R(T') U R(T2) U' R(T) U' F'
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh9">H9</a>
+					</td>
+					<td>
+						<img src="zbll/H9.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F' U L' U L U' L' U' L U2 L' U2 L U' F<br>
+						</span>
+						F' U L' U2 L U2 L' U L U L' U' L U' F<br>
+						F' U (L' U2 L) U2 (L' U L) U (L' U' L) U' F<br>
+						F' U L(T2) U2 L(T') U L(T) U' F
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh12">H12</a>
+					</td>
+					<td>
+						<img src="zbll/H12.png">
+					</td>
+					<td>
+						<span class="inv none">
+							F U' R U' R' U R U R' U2 R U2 R' U F'<br>
+						</span>
+						F U' R U2 R' U2 R U' R' U' R U R' U F'<br>
+						F U' (R U2 R') U2 (R U' R') U' (R U R') U F'<br>
+						F U' R(T2) U2 R(T') U' R(T) U F'
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 id="yoko-two">横２</h2>
+		<table class="">
+			<thead>
+				<tr>
+					<th>Case</th>
+					<th>Image</th>
+					<th>Alg</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh33">H33</a>
+					</td>
+					<td>
+						<img src="zbll/H33.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U2 R' U' R U R' U' R U' R'<br>
+						</span>
+						R U R' U R U' R' U R U2 R'<br>
+						(R U R') U (R U' R') U (R U2 R')<br>
+						R(T) U R(T') U R(T2)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh34">H34</a>
+					</td>
+					<td>
+						<img src="zbll/H34.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U2 L U L' U' L U L' U L<br>
+						</span>
+						L' U' L U' L' U L U' L' U2 L<br>
+						(L' U' L) U' (L' U L) U' (L' U2 L)<br>
+						L(T) U' L(T') U' L(T2)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh35">H35</a>
+					</td>
+					<td>
+						<img src="zbll/H35.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U' L U' L' U L U' L' U2 L y'<br>
+						</span>
+						y L' U2 L U L' U' L U L' U L<br>
+						y (L' U2 L) U (L' U' L) U (L' U L)<br>
+						y L(T2) U L(T) U L(T')
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh36">H36</a>
+					</td>
+					<td>
+						<img src="zbll/H36.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U R' U R U' R' U R U2 R' y<br>
+						</span>
+						y' R U2 R' U' R U R' U' R U' R'<br>
+						y' (R U2 R') U' (R U R') U' (R U' R')<br>
+						y' R(T2) U' R(T) U' R(T')
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh37">H37</a>
+					</td>
+					<td>
+						<img src="zbll/H37.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R U2 R' U' R U' R' U' R' U' R U' R' U2 R y<br>
+						</span>
+						y' R' U2 R U R' U R U R U R' U R U2 R'<br>
+						y' R' U2 (R U R') U R U (R U R') U (R U2 R')<br>
+						y' R' U2 R(T) U R U R(T) U R(T2)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh38">H38</a>
+					</td>
+					<td>
+						<img src="zbll/H38.png">
+					</td>
+					<td>
+						<span class="inv none">
+							L' U2 L U L' U L U L U L' U L U2 L' y'<br>
+						</span>
+						y L U2 L' U' L U' L' U' L' U' L U' L' U2 L<br>
+						y L U2 (L' U' L) U' L' U' (L' U' L) U' (L' U2 L)<br>
+						y L U2 L(T) U' L' U' L(T) U' L(T2)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh39">H39</a>
+					</td>
+					<td>
+						<img src="zbll/H39.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U' R U' R' U2 R U R U2 R' U' R U' R'<br>
+						</span>
+						R U R' U R U2 R' U' R' U2 R U R' U R<br>
+						(R U R') U (R U2 R') U' R' U2 (R U R') U R<br>
+						R(T) U R(T2) U' R' U2 R(T) U R
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://algdb.net/puzzle/333/zbll-zbllh/zbllh40">H40</a>
+					</td>
+					<td>
+						<img src="zbll/H40.png">
+					</td>
+					<td>
+						<span class="inv none">
+							R' U' R2 U R2 U R' U2 R' U2 R' U R2 U R2 U' R' y'<br>
+						</span>
+						y R U R2 U' R2 U' R U2 R U2 R U' R2 U' R2 U R<br>
+						y R U (R2 U' R2 U') (R U2 R U2) R U' R2 U' R2 U R<br>
+						y R U (R2 U')2 (R U2)2 R U' R2 U' R2 U R
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
