@@ -1,0 +1,14 @@
+body {
+  background-color: #CCC;
+  text-align: center;
+}
+body > * {
+  margin: auto;
+}
+#sunaba {
+  width: 140px;
+  height: 140px;
+}
+#label-wrapper {
+  max-width: 140px;
+}
