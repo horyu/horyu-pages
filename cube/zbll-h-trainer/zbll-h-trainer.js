@@ -1,6 +1,6 @@
 "use strict";
 
-function getRandomInt(max) {
+const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
@@ -70,7 +70,7 @@ class ConfigMaker {
   }
   make() {
     const auf = ["", "U ", "U2 ", "U' "][getRandomInt(4)];
-    const alg = this.targets[getRandomInt(this.targets.length)];
+    const alg = this.targets[getRandomInt(this.targets.length)] || '';
     let conf = `alg=${auf + alg}|colored=U*|hover=none`;
     if (this.cn) {
       conf += this._colors();
@@ -99,7 +99,7 @@ class ConfigMaker {
 const cm = new ConfigMaker;
 cm.config();
 
-function scramble() {
+const scramble = () => {
   if (CubeAnimation.webgl_cubes >= 16) {
     location.reload();
   }
@@ -108,7 +108,7 @@ function scramble() {
   CubeAnimation.create_in_dom('#sunaba', cm.make(), 'class="roofpig"');
 }
 
-Array.from(document.getElementsByTagName('input')).forEach(input => {
+Array.from(document.getElementsByClassName('config-alg')).forEach(input => {
   // bindしないと、thisが input になる
   input.addEventListener('change', cm.config.bind(cm));
 });
