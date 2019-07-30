@@ -39,9 +39,6 @@ tr > td:last-child {
 h1, h2 {
 	margin: 0;
 }
-.none {
-	display: none;
-}
 .inv {
 	color: red;
 }
@@ -49,9 +46,10 @@ h1, h2 {
 	<script>
 const toggleInv = () => {
 	for (span of document.getElementsByTagName('span')) {
-		span.classList.toggle('none');
+		span.style.display = (span.style.display ? '' : 'none');
 	}
 }
+window.onload = toggleInv;
 	</script>
 </head>
 <body>
@@ -85,7 +83,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H13.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U' L' U L U' L' U' L U2 R U' L' U R' y'<br>
 						</span>
 						y R U' L U R' U2 L' U L U L' U' L U L'<br>
@@ -101,7 +99,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H15.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U R U' R' U R U R' U2 L' U R U' L y'<br>
 						</span>
 						y L' U R' U' L U2 R U' R' U' R U R' U' R<br>
@@ -117,7 +115,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H20.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F U R U2 R' U R U R' F' R U2 R' U' R U' R' y'<br>
 						</span>
 						y R U R' U R U2 R' F R U' R' U' R U2 R' U' F'<br>
@@ -133,7 +131,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H14.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U2 R2 U R2 U R' D R' U2 R D' R2 y2<br>
 						</span>
 						y2 R2 D R' U2 R D' R U' R2 U' R2 U2 R
@@ -147,7 +145,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H16.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U2 L2 U' L2 U' L D' L U2 L' D L2<br>
 						</span>
 						L2 D' L U2 L' D L' U L2 U L2 U2 L'
@@ -161,7 +159,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H21.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U' L' U R' U L U L' U L y2<br>
 						</span>
 						y2 L' U' L U' L' U' R U' L U R'<br>
@@ -177,7 +175,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H22.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U R U' L U' R' U' R U' R'<br>
 						</span>
 						R U R' U R U L' U R' U' L<br>
@@ -193,7 +191,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H17.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U' L' U R' U L2 U L2 U L U' L U' L'<br>
 						</span>
 						L U L' U L' U' L2 U' L2 U' R U' L U R'<br>
@@ -209,7 +207,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H18.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U R U' L U' R2 U' R2 U' R' U R' U R y2<br>
 						</span>
 						y2 R' U' R U' R U R2 U R2 U L' U R' U' L<br>
@@ -225,7 +223,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H23.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U R U2 L' R' U R2 U' L U R' y'<br>
 						</span>
 						y R U' L' U R2 U' R L U2 R' U' R<br>
@@ -240,7 +238,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H24.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U' L' U2 R L U' L2 U R' U' L y'<br>
 						</span>
 						y L' U R U' L2 U L' R' U2 L U L'<br>
@@ -255,7 +253,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H19.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R2 U R' U' R' U2 R' U2 R U R' D R' U R D'<br>
 						</span>
 						D R' U' R D' R U' R' U2 R U2 R U R U' R2<br>
@@ -283,7 +281,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H25.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							B' U R2 U' R' U2 R U' R2 U2 R U R' B<br>
 						</span>
 						B' R U' R' U2 R2 U R' U2 R U R2 U' B<br>
@@ -299,7 +297,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H32.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							B U' L2 U L U2 L' U L2 U2 L' U' L B'<br>
 						</span>
 						B L' U L U2 L2 U' L U2 L' U' L2 U B'<br>
@@ -315,7 +313,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H28.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							x' U' R U' R' U R' F2 R U' R U R' U x<br>
 						</span>
 						x' U' R U' R' U R' F2 R U' R U R' U x<br>
@@ -331,7 +329,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H29.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U' R2 U x U2 R' U2 R U2 R F R' F' R2 y<br>
 						</span>
 						y' R2 F R F' R' U2 R' U2 R U2 x' U' R2 U R<br>
@@ -347,7 +345,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H30.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U L2 U' x U2 L U2 L' U2 L' F' L F L2 y'<br>
 						</span>
 						y L2 F' L' F L U2 L U2 L' U2 x' U L2 U' L'<br>
@@ -363,7 +361,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H26.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U' R2 F2 U' R2 U' R2 U F2 U R2 U R' y'<br>
 						</span>
 						y R U' R2 U' F2 U' R2 U R2 U F2 R2 U R'<br>
@@ -379,7 +377,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H27.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F U R U' R' U R U' R' U R U' R' F' y'<br>
 						</span>
 						y F R U R' U' R U R' U' R U R' U' F'<br>
@@ -395,7 +393,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H31.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U L2 F2 U L2 U L2 U' F2 U' L2 U' L y<br>
 						</span>
 						y' L' U L2 U F2 U L2 U' L2 U' F2 L2 U' L<br>
@@ -423,7 +421,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H1.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U2 R U' L U2 R' U' R U R' U M x<br>
 						</span>
 						x' M' U' R U' R' U R U2 L' U R' U2 R<br>
@@ -439,7 +437,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H2.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U2 L' U R' U2 L U L' U' L U' M x<br>
 						</span>
 						x' M' U L' U L U' L' U2 R U' L U2 L'<br>
@@ -455,7 +453,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H7.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U2 R2 U' R U' R' U2 F R U R U' R' F' y<br>
 						</span>
 						y' F R U R' U' R' F' U2 R U R' U R2 U2 R'<br>
@@ -471,7 +469,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H3.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U' R' D' R U R' D R' U R' U R U2 R'<br>
 						</span>
 						R U2 R' U' R U' R D' R U' R' D R U R<br>
@@ -487,7 +485,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H4.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L U L D L' U' L D' L U' L U' L' U2 L<br>
 						</span>
 						L' U2 L U L' U L' D L' U L D' L' U' L'<br>
@@ -503,7 +501,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H5.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U R U L' D' L U2 L' D L2 U R'<br>
 						</span>
 						R U' L2 D' L U2 L' D L U' R' U' L
@@ -517,7 +515,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H6.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U' L' U' R D R' U2 R D' R2 U' L<br>
 						</span>
 						L' U R2 D R' U2 R D' R' U L U R'
@@ -531,7 +529,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H10.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F' L2 U L2 U' L2 U' L2 B L2 B' F<br>
 						</span>
 						F' B L2 B' L2 U L2 U L2 U' L2 F<br>
@@ -547,7 +545,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H11.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F R2 U' R2 U R2 U R2 B' R2 B F'<br>
 						</span>
 						F B' R2 B R2 U' R2 U' R2 U R2 F'<br>
@@ -563,7 +561,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H8.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F U R U' R' U R U2 R' U' R U R' F' y2<br>
 						</span>
 						y2 F R U' R' U R U2 R' U' R U R' U' F'<br>
@@ -579,7 +577,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H9.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F' U L' U L U' L' U' L U2 L' U2 L U' F<br>
 						</span>
 						F' U L' U2 L U2 L' U L U L' U' L U' F<br>
@@ -595,7 +593,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H12.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							F U' R U' R' U R U R' U2 R U2 R' U F'<br>
 						</span>
 						F U' R U2 R' U2 R U' R' U' R U R' U F'<br>
@@ -623,7 +621,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H33.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U2 R' U' R U R' U' R U' R'<br>
 						</span>
 						R U R' U R U' R' U R U2 R'<br>
@@ -639,7 +637,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H34.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U2 L U L' U' L U L' U L<br>
 						</span>
 						L' U' L U' L' U L U' L' U2 L<br>
@@ -655,7 +653,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H35.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U' L U' L' U L U' L' U2 L y'<br>
 						</span>
 						y L' U2 L U L' U' L U L' U L<br>
@@ -671,7 +669,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H36.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U R' U R U' R' U R U2 R' y<br>
 						</span>
 						y' R U2 R' U' R U R' U' R U' R'<br>
@@ -687,7 +685,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H37.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R U2 R' U' R U' R' U' R' U' R U' R' U2 R y<br>
 						</span>
 						y' R' U2 R U R' U R U R U R' U R U2 R'<br>
@@ -703,7 +701,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H38.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							L' U2 L U L' U L U L U L' U L U2 L' y'<br>
 						</span>
 						y L U2 L' U' L U' L' U' L' U' L U' L' U2 L<br>
@@ -719,7 +717,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H39.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U' R U' R' U2 R U R U2 R' U' R U' R'<br>
 						</span>
 						R U R' U R U2 R' U' R' U2 R U R' U R<br>
@@ -735,7 +733,7 @@ const toggleInv = () => {
 						<img src="zbll-h/H40.png">
 					</td>
 					<td>
-						<span class="inv none">
+						<span class="inv">
 							R' U' R2 U R2 U R' U2 R' U2 R' U R2 U R2 U' R' y'<br>
 						</span>
 						y R U R2 U' R2 U' R U2 R U2 R U' R2 U' R2 U R<br>
