@@ -42,12 +42,13 @@ h1, h2 {
 .inv {
 	color: red;
 }
+.span-disp-none span{
+	display: none;
+}
 	</style>
 	<script>
 const toggleInv = () => {
-	for (span of document.getElementsByTagName('span')) {
-		span.style.display = (span.style.display ? '' : 'none');
-	}
+	document.body.classList.toggle('span-disp-none');
 }
 window.onload = toggleInv;
 	</script>
