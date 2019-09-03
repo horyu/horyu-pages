@@ -61,7 +61,7 @@ class ConfigMaker {
   }
   config() {
     this.targets = [];
-    for (let input of document.getElementsByClassName('config-alg')) {
+    for (const input of document.getElementsByClassName('config-alg')) {
       if (input.checked) {
         this.targets = this.targets.concat(this.halgs[input.id]);
       }
@@ -78,7 +78,7 @@ class ConfigMaker {
     return conf;
   }
   _colors() {
-    let c = { F: 'b', B: 'g', U: 'r', D: 'o', R: 'w', L: 'y' };
+    const c = { F: 'b', B: 'g', U: 'r', D: 'o', R: 'w', L: 'y' };
     [
       // x' : M 回転
       () => { [c.U, c.F, c.D, c.B] = [c.B, c.U, c.F, c.D]; },
@@ -87,7 +87,7 @@ class ConfigMaker {
       // z' : S 回転
       () => { [c.U, c.R, c.D, c.L] = [c.L, c.U, c.R, c.D]; },
     ].forEach(func => {
-      const n = getRandomInt(3);
+      const n = getRandomInt(4);
       for (let i=0; i<n; i++) {
         func();
       }
@@ -108,7 +108,7 @@ const scramble = () => {
   CubeAnimation.create_in_dom('#sunaba', cm.make(), 'class="roofpig"');
 }
 
-Array.from(document.getElementsByClassName('config-alg')).forEach(input => {
+Array.from(document.getElementsByClassName('config')).forEach(input => {
   // bindしないと、thisが input になる
   input.addEventListener('change', cm.config.bind(cm));
 });
