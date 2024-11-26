@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipboardItem Test</title>
+  <style>
+    pre {
+      margin: 0;
+      outline: 1px solid black;
+      word-break: break-all;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <button onclick="getClipboardItem()">Get Clipboard Item</button>
+    <output id="output"></output>
+  </p>
+
+  <p>
+    <button onclick="setClipboardItem()">Set Clipboard Item</button>
+  <div>
+    <label for="mimeType1">MIME Type 1:</label>
+    <input type="text" id="mimeType1" placeholder="Enter MIME type" value="text/plain">
+    <label for="text1">Text 1:</label>
+    <textarea id="text1" placeholder="Enter text"></textarea>
+  </div>
+  <div>
+    <label for="mimeType2">MIME Type 2:</label>
+    <input type="text" id="mimeType2" placeholder="Enter MIME type">
+    <label for="text2">Text 2:</label>
+    <textarea id="text2" placeholder="Enter text"></textarea>
+  </div>
+  </p>
+
+  <script>
+    // https://developer.mozilla.org/ja/docs/Web/API/ClipboardItem
+    async function getClipboardItem() {
+      try {
+        const output = document.getElementById("output");
+        output.replaceChildren(); // Clear the output
+
+        const clipboardItems = await navigator.clipboard.read();
+        for (const clipboardItem of clipboardItems) {
+          for (const type of clipboardItem.types) {
+            const blob = await clipboardItem.getType(type);
+            const text = await blob.text();
+            console.log(blob, text);
+            const randomId = Math.random().toString(36).slice(2);
+            output.insertAdjacentHTML("afterbegin", `
+            <div>
+              <h2>${type}</h2>
+              <pre id="${randomId}""></pre>
+            </div>`);
+            document.getElementById(randomId).textContent = text;
+          }
+        }
+      } catch (err) {
+        console.error(err.name, err.message);
+      }
+    }
+
+    async function setClipboardItem() {
+      const items = {};
+
+      const mimeType1 = document.getElementById("mimeType1").value;
+      const text1 = document.getElementById("text1").value;
+      if (mimeType1 && text1) {
+        items[mimeType1] = new Blob([text1], { type: mimeType1 });
+      }
+      const mimeType2 = document.getElementById("mimeType2").value;
+      const text2 = document.getElementById("text2").value;
+      if (mimeType2 && text2) {
+        items[mimeType2] = new Blob([text2], { type: mimeType2 });
+      }
+
+      try {
+        const clipboardItem = new ClipboardItem(items);
+        await navigator.clipboard.write([clipboardItem]);
+        console.log(clipboardItem);
+      } catch (err) {
+        console.error(err.name, err.message);
+      }
+    }
+  </script>
+</body>
+
+</html>
